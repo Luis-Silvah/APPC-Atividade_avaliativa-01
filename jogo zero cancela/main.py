@@ -13,7 +13,7 @@ print('''
       |                      JOGO ZERO CANCELA                     |
       ==============================================================               
 ''')
-time.sleep(2)
+time.sleep(2.5)
 
 print('''\n\t 
       --------------------------------------
@@ -26,24 +26,56 @@ print('''\n\t
       ------------------------------------ 
 ''')
 time.sleep(1.5)
-num=float(input('\n\t Digite um numero para somar'))
-soma=0
+
+
+# Declarção de variaveis
+soma = 0
+contNumC = 0
+contNumd = 0
+num = 0
+cont0 = 0
+
+numAnt1 = 0
+numAnt2 = 0
+numAnt3 = 0
+# Inicio do loop
 while num >= 0:
-    num=float(input('\n\t Digite um numero para somar'))
-    if num >= 0:
+    num=float(input('\n\t Digite um numero para somar: '))
+    if num > 0:
         soma += num
         cont0 = 0
+        contNumC += 1
+        numAnt3 = numAnt2
+        numAnt2 = numAnt1
+        numAnt1 = num
+
     elif num == 0:
-        soma -= num
         cont0 += 1
+        contNumd += 1
+        if cont0 == 1:
+            soma -= numAnt1
+        elif cont0 == 2:
+            soma -= numAnt2
+        elif cont0 == 3:
+            soma -= numAnt3
+        elif cont0 > 3:
+            print('\n\tNumero de deletes exedido')
     else:
-        print('''
-            
+        
+        print(f'''
+             ================================================= 
+            | SOMA |  NUM CONSIDERADOS  | NUM DECONSIDERADOS  |
+             =================================================
+            |      |                    |                     |
+            |  {soma} |          {contNumC}         |          {contNumd}          |
+             =================================================                  
         ''')
         time.sleep(1)
-print('''
-    _______________________________
-    |                               |
-    |       ORBIGADO POR JOGAR!     |
-     _______________________________
+    
+# Agradecimentos
+print('''\t
+     ______________________________
+    |                              |
+    |      ORBIGADO POR JOGAR!     |
+     ______________________________
 ''')

@@ -1,14 +1,35 @@
-print(
-    "\n\t",
-    33 * "=",
-    "\n\t | \t BEM VINDO! \t\t |",
-    "\n\t | \t JOGO ZERO CANCELA \t |",
-    "\n\t",
-    33 * "=",
-)
+# Trabalho grupo 1
+# Gabriel, Luis, Pedro Tiezo, Henrique
+
+import time;
+print('''
+\t==========================================================================
+\t|    BBBBB   EEEEE   M   M         V   V   IIIII   N   N   DDDD    OOOO   |
+\t|    B    B  E       MM MM         V   V     I     NN  N   D   D  O    O  |
+\t|    BBBBB   EEEE    M M M          V V      I     N N N   D   D  O    O  |
+\t|    B    B  E       M   M          V V      I     N  NN   D   D  O    O  |
+\t|    BBBBB   EEEEE   M   M           V     IIIII   N   N   DDDD    OOOO   |
+\t==========================================================================
+\t      |                      JOGO ZERO CANCELA                     |
+\t      ==============================================================               
+''')
+time.sleep(2.5)
+
+print('''\n\t 
+      --------------------------------------
+    |                  Regras                 |
+      --------------------------------------
+
+    |1- Digite um numero para Somar           |
+    |2- [0] Apaga o ultimo numero digitado    |
+    |3- numeros negativos terminam o programa |
+      ------------------------------------- 
+''')
+time.sleep(1.5)
 
 num = float(input("\n\t Digite um número para somar: "))
 
+# Declaração de variaveis
 soma = 0
 
 contRodadasZero = 0
@@ -20,6 +41,7 @@ numAntecessor01 = 0
 numAntecessor02 = 0
 numAntecessor03 = 0
 
+# Inicio do Loop
 while num >= 0:
     if num == 0:
         contRodadasZero += 1

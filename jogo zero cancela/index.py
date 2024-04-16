@@ -62,6 +62,8 @@ while num >= 0:
 
         if contRodadasZero > 3:
             print(f"Só é permitido até 3 zeros consecutivos!!!")
+        elif numAntecessor01 == 0:
+            print("Não há números para apagar")
         else:
             soma -= numAntecessor01
             contConsiderados -= 1
